@@ -32,8 +32,15 @@ RUN \
 
 # add local files
 COPY /root /
+COPY /chrome-listener /etc/chrome-listener
+
+RUN apk add npm
+RUN npm install --global web-ext
 
 # ports and volumes
 EXPOSE 3000
 
-VOLUME /config
+#VOLUME /config
+#COPY /.profile  /config/.profile
+
+#CMD "echo Hello World &"

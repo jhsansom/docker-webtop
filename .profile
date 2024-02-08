@@ -1,0 +1,1 @@
+cd /etc/chrome-listener && web-ext run &
