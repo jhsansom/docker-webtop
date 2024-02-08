@@ -30,12 +30,16 @@ RUN \
     /config/.cache \
     /tmp/*
 
+#RUN apk add --no-cache  chromium --repository=http://dl-cdn.alpinelinux.org/alpine/v3.10/main
+
 # add local files
 COPY /root /
 COPY /chrome-listener /etc/chrome-listener
 
 RUN apk add npm
 RUN npm install --global web-ext
+
+#ENV CHROME_BIN=/usr/bin/chromium
 
 # ports and volumes
 EXPOSE 3000
