@@ -25,6 +25,3 @@ services:
       #- /dev/dri:/dev/dri #optional
     shm_size: "1gb" #optional
     restart: unless-stopped
-  db:
-    ports:
-      - "127.0.0.1:80:80"
