@@ -15,6 +15,7 @@ RUN \
     faenza-icon-theme-xfce4-appfinder \
     faenza-icon-theme-xfce4-panel \
     firefox \
+    py3-pip \
     mousepad \
     ristretto \
     thunar \
@@ -35,6 +36,7 @@ RUN \
 # add local files
 COPY /root /
 COPY /chrome-listener /etc/chrome-listener
+COPY /replay-tool /etc/replay-tool
 
 RUN apk add npm
 RUN npm install --global web-ext
@@ -46,5 +48,3 @@ EXPOSE 3000
 
 #VOLUME /config
 #COPY /.profile  /config/.profile
-
-#CMD "echo Hello World &"
