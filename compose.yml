@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: ./Dockerfile
     image: this/test:v3
-    container_name: webtop
+    container_name: webtop-PORTNUM
     security_opt:
       - seccomp:unconfined #optional
     environment:
@@ -19,8 +19,7 @@ services:
       - ./WebTop:/config
       - /var/run/docker.sock:/var/run/docker.sock #optional
     ports:
-      - 3000:3000
-      - 3001:3001
+      - PORTNUM:PORTNUM
     #devices:
       #- /dev/dri:/dev/dri #optional
     shm_size: "1gb" #optional

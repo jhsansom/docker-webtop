@@ -46,7 +46,7 @@ RUN npm install --global web-ext
 #ENV PATH="/usr/bin/chromedriver:${PATH}"
 
 # ports and volumes
-EXPOSE 3000
+EXPOSE PORTNUM
 
 #VOLUME /config
 #COPY /.profile  /config/.profile
