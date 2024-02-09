@@ -1,7 +1,7 @@
 rm -r ./WebTop
-cp -r ../chrome-listener ./chrome-listener
+cp -r ../listener-plugin ./listener-plugin
 cp -r ../replay-tool ./replay-tool
 docker build .
 docker compose up -d
-rm -r ./chrome-listener
+rm -r ./listener-plugin
 rm -r ./replay-tool

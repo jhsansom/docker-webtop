@@ -1,1 +1,1 @@
-cd /etc/chrome-listener && web-ext run &
+cd /etc/listener-plugin && web-ext run &

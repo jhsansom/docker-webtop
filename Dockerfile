@@ -35,13 +35,15 @@ RUN \
 
 # add local files
 COPY /root /
-COPY /chrome-listener /etc/chrome-listener
+COPY /listener-plugin /etc/listener-plugin
 COPY /replay-tool /etc/replay-tool
 
 RUN apk add npm
 RUN npm install --global web-ext
 
 #ENV CHROME_BIN=/usr/bin/chromium
+#ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/chromium-browser
+#ENV PATH="/usr/bin/chromedriver:${PATH}"
 
 # ports and volumes
 EXPOSE 3000
