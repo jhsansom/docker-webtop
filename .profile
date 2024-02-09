@@ -1,1 +1,0 @@
-cd /etc/listener-plugin && web-ext run &
