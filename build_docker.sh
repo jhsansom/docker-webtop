@@ -3,7 +3,8 @@ cp -r ../../../listener-plugin ./listener-plugin
 cp -r ../../../replay-tool ./replay-tool
 docker build .
 docker compose up -d
-rm -r ./listener-plugin
 sleep 5
-cp ./replay-tool/run.sh ./WebTop/Desktop/run.sh
+cp ./listener-plugin/record.sh ./WebTop/Desktop/record.sh
+cp ./replay-tool/replay.sh ./WebTop/Desktop/replay.sh
+rm -r ./listener-plugin
 rm -r ./replay-tool
