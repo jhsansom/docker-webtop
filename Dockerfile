@@ -37,6 +37,7 @@ RUN \
 COPY /root /
 COPY /listener-plugin /etc/listener-plugin
 COPY /replay-tool /etc/replay-tool
+COPY /policies.json /usr/lib/firefox/distribution/policies.json
 
 RUN apk add npm
 RUN npm install --global web-ext

@@ -1,0 +1,7 @@
+{ 
+    "policies": { 
+        "Extensions": { 
+            "Install": ["/config/Desktop/single_file.xpi"] 
+        } 
+    } 
+}
