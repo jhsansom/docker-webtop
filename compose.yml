@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    image: this/test:v3
+    image: webtop:PORTNUM
     container_name: webtop-PORTNUM
     security_opt:
       - seccomp:unconfined #optional
