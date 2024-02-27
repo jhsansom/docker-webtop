@@ -20,6 +20,8 @@ RUN \
   apt-get install -y --no-install-recommends \
     chromium \
     chromium-l10n \
+    python3.11 \
+    python3-pip \
     dolphin \
     gwenview \
     kde-config-gtk-style \
