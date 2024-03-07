@@ -2,6 +2,10 @@
     "policies": { 
         "Extensions": { 
             "Install": ["/config/Desktop/single_file.xpi", "/config/Desktop/foxfilter.xpi"] 
-        } 
+        },
+        "Preferences": {
+            "browser.download.alwaysOpenPanel": false,
+            "browser.download.panel.shown": true
+        }
     } 
 }
