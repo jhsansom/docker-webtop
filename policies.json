@@ -1,7 +1,7 @@
 { 
     "policies": { 
         "Extensions": { 
-            "Install": ["/config/Desktop/single_file.xpi"] 
+            "Install": ["/config/Desktop/single_file.xpi", "/config/Desktop/foxfilter.xpi"] 
         } 
     } 
 }
