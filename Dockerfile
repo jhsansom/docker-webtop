@@ -15,6 +15,7 @@ RUN \
     faenza-icon-theme-xfce4-appfinder \
     faenza-icon-theme-xfce4-panel \
     firefox \
+    python3-tkinter \
     py3-pip \
     mousepad \
     ristretto \
