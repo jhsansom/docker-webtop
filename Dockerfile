@@ -40,6 +40,12 @@ COPY /listener-plugin /etc/listener-plugin
 COPY /replay-tool /etc/replay-tool
 COPY /policies.json /usr/lib/firefox/distribution/policies.json
 
+# Attach SSL certificates
+COPY /certs/server.cert /usr/local/share/ca-certificates/server.crt
+COPY /certs/server.key /usr/local/share/ca-certificates/server.key
+ENV WEBTOP_SSL_CERTIFICATE=/usr/local/share/ca-certificates/server.crt
+ENV WEBTOP_SSL_CERTIFICATE_KEY=/usr/local/share/ca-certificates/server.key
+
 RUN apk add npm
 RUN npm install --global web-ext
 
@@ -48,7 +54,10 @@ RUN npm install --global web-ext
 #ENV PATH="/usr/bin/chromedriver:${PATH}"
 
 # ports and volumes
-EXPOSE 3000
+EXPOSE 3001
+
+#USER root
+RUN update-ca-certificates
 
 #VOLUME /config
 #COPY /.profile  /config/.profile
