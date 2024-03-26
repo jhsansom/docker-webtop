@@ -1,8 +1,17 @@
 rm -r ./WebTop
 cp -r ../../../listener-plugin ./listener-plugin
-cp -r ../../../replay-tool ./replay-tool
-docker build .
-docker compose up -d
+
+# Copy obfuscated contents of replay tool
+(cd ../../../replay-tool && pyarmor gen display.py)
+(cd ../../../replay-tool && pyarmor gen textparser.py)
+(cd ../../../replay-tool && pyarmor gen validate.py)
+(cd ../../../replay-tool && pyarmor gen webtool.py)
+(cd ../../../replay-tool && pyarmor gen xpathhandler.py)
+cp -r ../../../replay-tool/dist ./replay-tool
+cp ../../../replay-tool/replay.sh ./replay-tool/replay.sh
+cp ../../../replay-tool/validate.sh ./replay-tool/validate.sh
+sudo docker build .
+sudo docker compose up -d
 wget wget https://addons.mozilla.org/firefox/downloads/file/4235927/single_file-1.22.42.xpi
 wget wget https://addons.mozilla.org/firefox/downloads/file/3790346/foxfilter-9.6.xpi
 sleep 10
@@ -15,4 +24,5 @@ cp ./replay-tool/validate.sh ./WebTop/Desktop/5validate.sh & echo "Installing va
 mv ./WebTop/Desktop/3record.sh ./WebTop/Desktop/3_record.sh & echo "Moving recorder"
 mv ./WebTop/Desktop/4replay.sh ./WebTop/Desktop/4_replay.sh & echo "Moving replay"
 mv ./WebTop/Desktop/5validate.sh ./WebTop/Desktop/5_validate.sh & echo "Moving validate"
+
 echo "Done copying files"
