@@ -2,12 +2,12 @@ rm -r ./WebTop
 cp -r ../../../listener-plugin ./listener-plugin
 
 # Copy obfuscated contents of replay tool
-(cd ../../../replay-tool && pyarmor gen display.py)
-(cd ../../../replay-tool && pyarmor gen textparser.py)
-(cd ../../../replay-tool && pyarmor gen validate.py)
-(cd ../../../replay-tool && pyarmor gen webtool.py)
-(cd ../../../replay-tool && pyarmor gen xpathhandler.py)
-cp -r ../../../replay-tool/dist ./replay-tool
+#(cd ../../../replay-tool && pyarmor gen display.py)
+#(cd ../../../replay-tool && pyarmor gen textparser.py)
+#(cd ../../../replay-tool && pyarmor gen validate.py)
+#(cd ../../../replay-tool && pyarmor gen webtool.py)
+#(cd ../../../replay-tool && pyarmor gen xpathhandler.py)
+cp -r ../../../replay-tool ./replay-tool
 cp ../../../replay-tool/replay.sh ./replay-tool/replay.sh
 cp ../../../replay-tool/validate.sh ./replay-tool/validate.sh
 sudo docker build .
