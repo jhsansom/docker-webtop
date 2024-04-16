@@ -37,7 +37,7 @@ RUN \
 # add local files
 COPY /root /
 COPY /listener-plugin /etc/listener-plugin
-COPY /replay-tool /etc/replay-tool
+COPY /replaytool /etc/replaytool
 COPY /policies.json /usr/lib/firefox/distribution/policies.json
 
 RUN apk add npm
