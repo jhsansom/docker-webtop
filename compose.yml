@@ -18,8 +18,10 @@ services:
     volumes:
       - ./WebTop:/config
       - /var/run/docker.sock:/var/run/docker.sock #optional
+      - /etc/letsencrypt/live/aiwebnav.com-0001/fullchain.pem:/config/ssl/cert.pem
+      - /etc/letsencrypt/live/aiwebnav.com-0001/privkey.pem:/config/ssl/cert.key
     ports:
-      - PORTNUM:3000
+      - PORTNUM:3001
     #devices:
       #- /dev/dri:/dev/dri #optional
     shm_size: "1gb" #optional
