@@ -22,6 +22,7 @@ RUN \
     chromium-l10n \
     python3.11 \
     python3-pip \
+    python3-tk \
     dolphin \
     gwenview \
     kde-config-gtk-style \
@@ -63,4 +64,4 @@ EXPOSE 3000
 VOLUME /config
 
 COPY /listener-plugin /etc/listener-plugin
-COPY /replay-tool /etc/replay-tool
+COPY /replaytool /etc/replaytool
