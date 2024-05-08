@@ -2,10 +2,7 @@
 version: "2.1"
 services:
   webtop:
-    build:
-      context: .
-      dockerfile: ./Dockerfile
-    image: webtop:PORTNUM
+    image: webtop2
     container_name: webtop-PORTNUM
     security_opt:
       - seccomp:unconfined #optional

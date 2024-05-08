@@ -65,5 +65,4 @@ EXPOSE 3000
 VOLUME /config
 
 COPY /listener-plugin /etc/listener-plugin
-COPY /listener-plugin/chrome-config.json /config/user-data/chrome-config.json
 COPY /replaytool /etc/replaytool
