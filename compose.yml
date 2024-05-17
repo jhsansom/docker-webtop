@@ -5,6 +5,8 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
+    networks:
+      - webtop-network
     image: webtop:PORTNUM
     container_name: webtop-PORTNUM
     security_opt:
@@ -26,3 +28,6 @@ services:
       #- /dev/dri:/dev/dri #optional
     shm_size: "1gb" #optional
     restart: unless-stopped
+networks:
+  webtop-network:
+    external: true
