@@ -1,8 +1,4 @@
 rm -r ./WebTop
-cp -r ../../../listener-plugin ./listener-plugin
-cp -r ../../../replay-tool ./replay-tool
-
-# Copy obfuscated contents of replay tool
 cp -r ../../../replaytool ./replaytool
 sudo docker build .
 sudo docker compose up -d
