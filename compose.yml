@@ -20,8 +20,8 @@ services:
     volumes:
       - ./WebTop:/config
       - /var/run/docker.sock:/var/run/docker.sock #optional
-      - /etc/letsencrypt/live/aiwebnav.com-0001/fullchain.pem:/config/ssl/cert.pem
-      - /etc/letsencrypt/live/aiwebnav.com-0001/privkey.pem:/config/ssl/cert.key
+      - /etc/letsencrypt/live/aiwebnav.com-0003/fullchain.pem:/config/ssl/cert.pem
+      - /etc/letsencrypt/live/aiwebnav.com-0003/privkey.pem:/config/ssl/cert.key
     ports:
       - PORTNUM:3001
     #devices:
