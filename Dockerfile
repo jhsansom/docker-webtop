@@ -64,8 +64,6 @@ COPY /root /
 EXPOSE 3000
 VOLUME /config
 
-COPY /custom-kasmvnc.yaml /etc/kasmvnc/kasmvnc2.yaml
-
 COPY /listener-plugin /etc/listener-plugin
 COPY /listener-plugin/policies.json /etc/chromium/policies/managed/policies.json
 COPY /replaytool /etc/replaytool
