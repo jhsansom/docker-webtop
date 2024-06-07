@@ -1,5 +1,6 @@
 rm -r ./WebTop
 cp -r ../../../replaytool ./replaytool
+cp -r ../../../listener-plugin ./listener-plugin
 sudo docker build .
 sudo docker compose up -d
 sleep 10
